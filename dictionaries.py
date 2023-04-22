@@ -17,12 +17,23 @@ for k in hashmap:
     i += 1
 print(f'{media:.2f}')
 print(f'{max_temp:.2f}')
+print()
 # Q2
 
 print(hashmap.get('Jan 4'))
 print(hashmap.get('Jan 9'))
 
 # Q3
+print()
+poem_map = {}
 
+i = 0
 
+with open('poem.txt', 'r') as poem:
+    lista = poem.read().split()
+    for k in lista:
+        poem_map[k] = lista.index(k)
+print(poem_map.get('diverged'))
+print(poem_map.get('in'))
+print(poem_map.get('I'))
 
