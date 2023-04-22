@@ -1,5 +1,3 @@
-import numpy as np
-
 hashmap = {}
 
 with open('nyc_weather.csv', 'r') as data:
@@ -19,4 +17,12 @@ for k in hashmap:
     i += 1
 print(f'{media:.2f}')
 print(f'{max_temp:.2f}')
+# Q2
+
+print(hashmap.get('Jan 4'))
+print(hashmap.get('Jan 9'))
+
+# Q3
+
+
 
