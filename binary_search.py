@@ -1,23 +1,16 @@
-import random
-
 valid = True
-lista = []
-for i in range(100):
-    lista.append(round(random.randint(0, 100)))
-
-lista.sort()
-i = 0
-
+lista = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]
+num = int(input())
 while valid:
     mid = len(lista) // 2
-    lista_esq = lista[0: mid]
-    lista_dir = lista[mid: -1]
-    if 44 in lista_esq:
-        lista = lista_esq
-    if 44 in lista_dir:
-        lista = lista_dir
-    if lista[0] == 44:
+    if num < lista[mid]:
+        lista = lista[0:mid]
+        print(lista)
+    elif num > lista[mid]:
+        lista = lista[mid:-1]
+        print(lista)
+    elif num == lista[mid]:
+        lista = lista[mid]
         valid = False
-    i += 1
+
 print(lista)
-print(i)
